@@ -1,0 +1,29 @@
+		<div class="row">		 
+			 <!-- Large modal -->
+			<div class="col-sm-10">
+				<input ng-model="searchText" class="form-control" placeholder="Search...">
+			</div>
+			<div class="col-sm-2">
+				<button type="button"  ng-click="save()" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-external-link-square"></i> Exporter ce résultat</button><br /> <br /> 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Votre nouveau JSON</h4>
+				  </div>
+				  <div class="modal-body">
+					{{savedJSON}}
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-success" ng-click="saveToPc()" ><i class="fa fa-download"></i> Télécharger ce JSON</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		

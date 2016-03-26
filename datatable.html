@@ -1,0 +1,17 @@
+		<div class="row">	
+			<table class="table table-striped" > 
+				<thead>
+					<tr>
+						<th ng-repeat="key in keys"><div style="text-align:center" ng-click="sort(key)">{{key | ucfirst}}<br /><i ng-class="changeClass(key)"></i></div></th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td ng-repeat="key in keys">{{visualisation[key]}}</td>
+				</tr>
+				<tr ng-repeat="data in products | filter: searchText | orderBy:orderProp:direction">
+					<td ng-repeat="key in keys ">{{data[key]}}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
